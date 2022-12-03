@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Word I unknow",
+    "version": "0.1.0",
+    "description": "Save words I unknow",
+    "browser_action": {
+        "default_title": "Save word unknow"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}

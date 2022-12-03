@@ -1,0 +1,4 @@
+backend/.env
+backend/c.json
+backend/node_modules/
+backend/.next
