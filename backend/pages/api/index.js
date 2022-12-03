@@ -1,5 +1,4 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
-const credenciais = require('./../../c.json');
 
 const VALIDATE_KEY = process.env.KEY
 const SHEET_ID = process.env.SHEET_ID
@@ -8,8 +7,8 @@ const getDoc = async () => {
   const doc = new GoogleSpreadsheet(SHEET_ID);
 
   await doc.useServiceAccountAuth({
-    client_email: credenciais.client_email,
-    private_key: credenciais.private_key.replace(/\\n/g, '\n')
+    client_email: process.env.CLIENT_EMAIL,
+    private_key:  process.env.PRIVATE_KEY.replace(/\\n/g, '\n')
   })
   await doc.loadInfo();
   return doc;
